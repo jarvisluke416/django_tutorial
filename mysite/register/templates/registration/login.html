@@ -1,0 +1,139 @@
+<!doctype html>
+<head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"><!--shrink-to-fit=no-->
+   <style type="text/css">
+     body {
+      overflow-y: hidden; /* Hide vertical scrollbar */
+      overflow-x: hidden; /* Hide horizontal scrollbar */
+      }
+
+    .sidenav {
+        height: 100%;
+        width: 160px;
+        position: fixed;
+        z-index:1;
+        top: 0;
+        left:0;
+        background-color: #111;
+        overflow-x: hidden;
+        padding-top: 20px;
+    }
+
+    .sidenav a {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        color: #818181;
+        font-size: 25px;
+        display: block;
+    }
+
+    .sidenav a:hover {
+        color: f1f1f1;
+    }
+
+    .main {
+        margin-left: 160px;
+        padding: 0px 10px;
+    }
+
+    .password {
+        position: relative;
+        left: 300px;
+        width: 500px;
+    }
+
+    .username {
+        position: relative;
+        left: 300px;
+        width: 500px;
+    }
+
+    .usernamelabel {
+        position: relative;
+        left: 300px;
+    }
+    
+    .passwordlabel {
+        position: relative;
+        left: 300px;
+    }
+
+    .createone {
+        position: relative;
+        left: 600px;
+    }
+
+    .mysite {
+        position: relative;
+        left: 300px;
+    }
+
+    .button {
+    position: relative;
+    left: 473px;
+    top: 10px;
+    width: 500px;
+    background-color: green;
+    color: white; 
+    border: none; 
+    border-radius: 5px;     
+    font-size: 16px;
+    cursor: pointer; 
+}
+
+.button:hover {
+    background-color: darkgreen; 
+}
+
+</style>
+
+<title>
+Login
+</title>
+        <body>
+            <div class="sidenav">
+                <a href="/home">Home</a>
+                <a href="/create">Create</a>
+                <a href="/2">View</a>
+
+            </div>
+            <div id="content", name="content", class="main">
+                <div class="row justify-content-center">
+                    <div class="col-8">
+                    <h1 class="mysite">My Site</h1>
+                    <hr class="mt-0 mb-4">
+                    
+<form method="post" class="form-group">
+    {% csrf_token %}
+    <div>
+    <label for="id_username" class="usernamelabel">Username:</label></div></br>
+
+
+
+<input type="text" name="username" autofocus autocapitalize="none" autocomplete="username" maxlength="150" required id="id_username" class="username">
+    
+</div>
+</div></br>
+  <div>
+    <label for="id_password" class="passwordlabel">Password:</label></div></br>
+
+
+
+<input type="password" name="password" autocomplete="current-password" required id="id_password" class="password">
+    
+      
+    
+</div>
+<button type="submit" class="button">Login</button>
+<p class="createone">Don't have an account? Create one <a href="/register">here</a></p>
+</form>
+
+                </div>
+                </div>
+                </div>
+            <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+        </body>
+    </head>
+</html>
